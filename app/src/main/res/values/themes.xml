@@ -6,6 +6,8 @@
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FDFDFD</item>
+        <item name="colorPrimary">@color/teal</item>
+        <item name="backgroundColor">@color/white</item>
     </style>
 
     <style name="Theme.MultimediaConvertor" parent="Base.Theme.MultimediaConvertor" />

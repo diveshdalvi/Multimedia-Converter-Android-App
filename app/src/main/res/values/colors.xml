@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#0097B2</color>
-    <color name="primary_teal">#005666</color>
+    <color name="dark_teal">#005666</color>
+
 </resources>

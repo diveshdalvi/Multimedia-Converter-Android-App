@@ -22,9 +22,7 @@
         <activity
             android:name=".page_10th"
             android:exported="true" />
-        <activity
-            android:name=".HistoryPage"
-            android:exported="true" />
+
         <activity
             android:name=".page_7th"
             android:exported="true" />
@@ -42,7 +40,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
