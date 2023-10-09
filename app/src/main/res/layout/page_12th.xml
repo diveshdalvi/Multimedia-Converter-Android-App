@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/upload_image_btn"
         android:layout_width="315dp"
         android:layout_height="113dp"
         android:text="Upload Image of PDF"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <Button
-        android:id="@id/button2"
+        android:id="@+id/output_btn"
         android:layout_width="309dp"
         android:layout_height="73dp"
         android:text="Output File"

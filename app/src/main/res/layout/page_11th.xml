@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/upload_pdf1_btn"
         android:layout_width="297dp"
         android:layout_height="73dp"
         android:text="Upload PDF 1"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.229" />
 
     <Button
-        android:id="@id/button2"
+        android:id="@+id/upload_pdf2_btn"
         android:layout_width="292dp"
         android:layout_height="74dp"
         android:text="Upload PDF 2"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.47" />
 
     <Button
-        android:id="@id/button2"
+        android:id="@+id/output_pdf"
         android:layout_width="292dp"
         android:layout_height="74dp"
         android:text="output files"

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MultimediaConvertor" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.MultimediaConvertor.Light" parent="Theme.Material3.DayNight.NoActionBar">
     </style>
     <style name="textview" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:textSize">25sp</item>
