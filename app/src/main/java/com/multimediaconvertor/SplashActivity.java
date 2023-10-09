@@ -19,6 +19,6 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 startActivity(home);
             }
-        },3000);
+        },2500);
     }
 }

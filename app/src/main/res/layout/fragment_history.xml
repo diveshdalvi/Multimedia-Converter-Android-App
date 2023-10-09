@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoryFragment">
-
+    <include layout="@layout/top_nav"/>
     <TextView
         android:textSize="50dp"
         android:layout_gravity="center"

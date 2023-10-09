@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AppTheme"
-    >
+    android:theme="@style/AppTheme">
+    <include layout="@layout/top_nav"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -68,19 +68,6 @@
         app:layout_constraintVertical_bias="0.262"
         tools:ignore="HardcodedText,SpUsage" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:itemIconSize="52dp"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        android:background="@color/teal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:iconSize="36dp"
-        app:menu="@menu/bottom_nav"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

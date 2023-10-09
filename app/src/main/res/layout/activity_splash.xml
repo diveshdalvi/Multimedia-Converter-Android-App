@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="311dp"
-        android:layout_height="279dp"
+        android:layout_width="372dp"
+        android:layout_height="369dp"
         android:layout_marginTop="180dp"
         android:contentDescription="@string/app_name"
 
 
         android:src="@drawable/app_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"></ImageView>
