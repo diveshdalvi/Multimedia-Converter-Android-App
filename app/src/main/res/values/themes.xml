@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MultimediaConvertor" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+    <style name="textview" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FDFDFD</item>
+    </style>
+
+    <style name="Theme.MultimediaConvertor" parent="Base.Theme.MultimediaConvertor" />
+</resources>
