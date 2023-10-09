@@ -59,6 +59,6 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.page_8th, container, false);
+        return inflater.inflate(R.layout.page_9th, container, false);
     }
 }
