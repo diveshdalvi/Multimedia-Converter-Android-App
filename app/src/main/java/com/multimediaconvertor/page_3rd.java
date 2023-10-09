@@ -12,12 +12,12 @@ public class page_3rd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_3rd);
     }
-        public void compressBtnHandler(View view) {
-            // Perform the action for Button 1
-            // For example, open a new activity
-            Intent intent = new Intent(this, Button1Activity.class);
-            startActivity(intent);
-        }
+//        public void compressBtnHandler(View view) {
+//            // Perform the action for Button 1
+//            // For example, open a new activity
+//            Intent intent = new Intent(this, Button1Activity.class);
+//            startActivity(intent);
+//        }
 //
 
 }
