@@ -13,21 +13,6 @@ public class page_9th extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_9th);
 
-//        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-//        Menu menu = bottomNavigationView.getMenu();
-//
-//        bottomNavigationView.setOnItemSelectedListener(item -> {
-//            int itemId = item.getItemId();
-//            if (itemId == R.id.home) {
-//                startActivity(new Intent(this, HomeActivity.class));
-//                return true;
-//
-//            } else if (itemId == R.id.history) {
-//                startActivity(new Intent(this, HistoryPage.class));
-//                return true;
-//            } else {
-//                return false;
-//            }
-//        });
+
     }
 }
