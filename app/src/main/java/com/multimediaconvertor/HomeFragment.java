@@ -61,25 +61,63 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.fragment_home, container, false);
         ImageButton settingBtn = rootView.findViewById(R.id.settingBtn);
-
         ImageButton imageButton = rootView.findViewById(R.id.imageButton);
         ImageButton videoButton = rootView.findViewById(R.id.videoButton);
         ImageButton textButton = rootView.findViewById(R.id.textButton);
-        ImageButton MusicButton = rootView.findViewById(R.id.musicButton);
-        ImageButton pdfButton=rootView.findViewById(R.id.pdfButton);
-        settingBtn.setOnClickListener(new View.OnClickListener() {
+        ImageButton musicButton = rootView.findViewById(R.id.musicButton);
+        ImageButton pdfButton = rootView.findViewById(R.id.pdfButton);
+
+        View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSettingsPage();
+                // Handle the click event here
+                if (v == settingBtn) {
+                    openSettingsPage();
+                } else if (v == imageButton) {
+                    openImagePage();
+                }
+             else if (v == videoButton) {
+                   openVideoPage();
+                }
+             else if (v == textButton) {
+                    openTextPage();
+                }
+             else if (v == musicButton) {
+                   openMusicPage();
+                }
+             else if (v == pdfButton) {
+                    openPdfPage();
+                }
             }
-        });
+        };
+
+        settingBtn.setOnClickListener(clickListener);
+        imageButton.setOnClickListener(clickListener);
+        videoButton.setOnClickListener(clickListener);
+        textButton.setOnClickListener(clickListener);
+        musicButton.setOnClickListener(clickListener);
+        pdfButton.setOnClickListener(clickListener);
         return rootView;
-
-
     }
+
 
     private void openSettingsPage() {
         Intent intent = new Intent(getActivity(), settingPage.class);
+        startActivity(intent);
+    }private void openImagePage() {
+        Intent intent = new Intent(getActivity(), page_3rd.class);
+        startActivity(intent);
+    }private void openVideoPage() {
+        Intent intent = new Intent(getActivity(), page_4rth.class);
+        startActivity(intent);
+    }private void openMusicPage() {
+        Intent intent = new Intent(getActivity(), page_5th.class);
+        startActivity(intent);
+    }private void openTextPage() {
+        Intent intent = new Intent(getActivity(), page_6th.class);
+        startActivity(intent);
+    }private void openPdfPage() {
+        Intent intent = new Intent(getActivity(), page_7th.class);
         startActivity(intent);
     }
     }
