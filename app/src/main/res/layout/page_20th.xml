@@ -1,0 +1,88 @@
+<!-- activity_video_trim.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context=".page_18th">
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/top_nav" />
+
+
+    <Button
+        android:id="@+id/upload_audio_btn"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/top_rect"
+        android:text="Upload Audio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6"
+        app:layout_constraintVertical_bias="0.038" />
+
+
+    <ImageView
+        android:id="@+id/playPauseImageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/play_icon"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_audio_btn" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/trimButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_audio_btn"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <Button
+        android:id="@+id/setStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="28dp"
+        android:text="Set Start Point"
+        app:layout_constraintBottom_toTopOf="@+id/trimButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+        android:id="@+id/setEndButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:text="Set End Point"
+        app:layout_constraintBottom_toTopOf="@+id/trimButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/setStartButton"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+        android:id="@+id/trimButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/top_rect"
+        android:text="Trim Video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6"
+        app:layout_constraintVertical_bias="0.842" />
+</androidx.constraintlayout.widget.ConstraintLayout>

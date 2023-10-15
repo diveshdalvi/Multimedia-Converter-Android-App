@@ -49,9 +49,14 @@ public class page_4rth extends AppCompatActivity {
         trimBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSetting();
+                openTrimPage();
             }
         });
+    }
+
+    private void openTrimPage() {
+        Intent intent = new Intent(this, page_19th.class);
+        startActivity(intent);
     }
 
     private void openMp3ToMp4Page() {
