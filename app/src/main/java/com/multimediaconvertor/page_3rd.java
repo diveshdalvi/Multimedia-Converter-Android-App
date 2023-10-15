@@ -63,7 +63,7 @@ public class page_3rd extends AppCompatActivity{
     }
 
     private void openCrop() {
-        Intent intent = new Intent(this, settingPage.class);
+        Intent intent = new Intent(this, page_21th.class);
         startActivity(intent);
     }
 
