@@ -7,10 +7,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class page_3rd extends top_rect {
+public class page_3rd extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +68,7 @@ public class page_3rd extends top_rect {
     }
 
     private void openCompress() {
-        Intent intent = new Intent(this, page_12th.class);
+        Intent intent = new Intent(this, page_13th.class);
         startActivity(intent);
     }
 

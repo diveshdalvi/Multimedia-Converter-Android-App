@@ -39,13 +39,13 @@ public class page_6th extends AppCompatActivity {
         convertToUpperBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               openSetting();
+               openConvertToUppercase();
             }
         });
         convertToLowerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSetting();
+                openConvertToLowerCase();
             }
         });
         changeStylingBtn.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +54,16 @@ public class page_6th extends AppCompatActivity {
                 openChangeStylingPage();
             }
         });
+    }
+
+    private void openConvertToLowerCase() {
+        Intent intent = new Intent(this, page_15th.class);
+        startActivity(intent);
+    }
+
+    private void openConvertToUppercase() {
+        Intent intent = new Intent(this, page_14th.class);
+        startActivity(intent);
     }
 
     private void openChangeStylingPage() {

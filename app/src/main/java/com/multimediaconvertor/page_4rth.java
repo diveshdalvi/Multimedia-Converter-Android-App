@@ -43,7 +43,7 @@ public class page_4rth extends AppCompatActivity {
         mp3ToMp4Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                opencompressPage();
+                openMp3ToMp4Page();
             }
         });
         trimBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +52,11 @@ public class page_4rth extends AppCompatActivity {
                 openSetting();
             }
         });
+    }
+
+    private void openMp3ToMp4Page() {
+        Intent intent = new Intent(this, page_16th.class);
+        startActivity(intent);
     }
 
     private void opencompressPage() {

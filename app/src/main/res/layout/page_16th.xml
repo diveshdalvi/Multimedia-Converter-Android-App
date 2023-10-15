@@ -5,17 +5,19 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include layout="@layout/top_nav" android:id="@+id/include2"/>
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/top_nav" />
 
     <Button
-        android:id="@+id/upload_audio_btn"
+        android:id="@+id/upload_video_btn"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:layout_marginTop="84dp"
         android:background="@drawable/top_rect"
-        android:text="Upload Audio"
+        android:text="Upload Video"
         android:textColor="@color/white"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,20 +26,19 @@
         app:layout_constraintTop_toBottomOf="@+id/include2" />
 
     <Button
-        android:id="@+id/coutput_audio_btn"
+        android:id="@+id/output_file"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:textSize="25sp"
         android:layout_marginTop="72dp"
         android:background="@drawable/top_rect"
-        android:text="Upload Audio"
+        android:text="Output File"
         android:textColor="@color/white"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upload_audio_btn"
+        app:layout_constraintTop_toBottomOf="@+id/upload_video_btn"
         app:layout_constraintVertical_bias="0.091" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

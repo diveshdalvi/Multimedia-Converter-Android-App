@@ -40,7 +40,7 @@ public class page_7th  extends AppCompatActivity{
         convertToDocxBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSetting();
+                openConvertToDocxPage();
             }
         });
         mergePdfBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +52,19 @@ public class page_7th  extends AppCompatActivity{
         pdfSplitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSetting();
+                openPdfSplitPage();
             }
         });
+    }
+
+    private void openConvertToDocxPage() {
+        Intent intent = new Intent(this, page_18th.class);
+        startActivity(intent);
+    }
+
+    private void openPdfSplitPage() {
+        Intent intent = new Intent(this, page_17th.class);
+        startActivity(intent);
     }
 
     private void openMergePdfPage() {
