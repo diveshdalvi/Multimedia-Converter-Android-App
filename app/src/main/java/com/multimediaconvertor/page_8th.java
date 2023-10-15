@@ -1,8 +1,11 @@
 package com.multimediaconvertor;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spannable;
 import android.text.style.UnderlineSpan;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -19,5 +22,28 @@ public class page_8th extends AppCompatActivity {
         spannableString.setSpan(new UnderlineSpan(), 0, text.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         myTextView.setText(spannableString);
+
+        ImageButton backButton = findViewById(R.id.back_btn);
+        ImageButton settingButton = findViewById(R.id.setting_btn);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSetting();
+            }
+        });
+    }
+
+    private void openSetting() {
+        Intent intent = new Intent(this, settingPage.class);
+        startActivity(intent);
+
 
     }}

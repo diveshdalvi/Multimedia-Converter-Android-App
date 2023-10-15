@@ -9,10 +9,11 @@
 
     <Button
         android:id="@+id/upload_pdf1_btn"
-        android:layout_width="297dp"
-        android:layout_height="73dp"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:textSize="25sp"
         android:text="Upload PDF 1"
-        android:textSize="30dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +22,11 @@
 
     <Button
         android:id="@+id/upload_pdf2_btn"
-        android:layout_width="292dp"
-        android:layout_height="74dp"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:textSize="25sp"
         android:text="Upload PDF 2"
-        android:textSize="30dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
@@ -34,10 +36,11 @@
 
     <Button
         android:id="@+id/output_pdf"
-        android:layout_width="292dp"
-        android:layout_height="74dp"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:textSize="25sp"
         android:text="output files"
-        android:textSize="30dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"

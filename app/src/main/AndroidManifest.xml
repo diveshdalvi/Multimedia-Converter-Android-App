@@ -17,6 +17,9 @@
             android:name=".page_8th"
             android:exported="true" />
         <activity
+            android:name=".top_rect"
+            android:exported="true" />
+        <activity
             android:name=".page_3rd"
             android:exported="true" />
         <activity

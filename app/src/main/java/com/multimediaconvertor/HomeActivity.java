@@ -29,13 +29,15 @@ public class HomeActivity extends AppCompatActivity  {
             }
             return true;
         });
-//
+
         }
         private void replaceFragment(Fragment fragment){
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             final FragmentTransaction replace = fragmentTransaction.replace(R.id.frame_layout , fragment);
             fragmentTransaction.commit();
+
+
         }
  }
 

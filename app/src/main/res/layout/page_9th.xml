@@ -4,20 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/top_nav" android:id="@+id/include2"/>
 
-    <include
-        android:id="@+id/include2"
-        layout="@layout/top_nav" />
 
     <Button
         android:id="@+id/upload_audio_btn"
-        android:layout_width="272dp"
-        android:layout_height="75dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
         android:layout_marginTop="84dp"
         android:background="@drawable/top_rect"
         android:text="Upload Audio"
         android:textColor="@color/white"
-        android:textSize="25sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +24,14 @@
 
     <Button
         android:id="@+id/coutput_audio_btn"
-        android:layout_width="272dp"
-        android:layout_height="75dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
         android:layout_marginTop="72dp"
         android:background="@drawable/top_rect"
         android:text="Upload Audio"
         android:textColor="@color/white"
-        android:textSize="25sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
