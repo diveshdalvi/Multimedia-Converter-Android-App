@@ -4,8 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -13,7 +16,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class settingPage extends AppCompatActivity {
-    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    @SuppressLint({"UseSwitchCompatOrMaterialCode", "MissingInflatedId"})
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_page);
@@ -33,6 +36,28 @@ public class settingPage extends AppCompatActivity {
                 }
             }
         });
+        ImageView aboutDevBtn;
+        TextView aboutDevBtnText;
+        aboutDevBtn = findViewById(R.id.aboutDevBtn);
+        aboutDevBtnText = findViewById(R.id.aboutDevBtnText);
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click event here
+                if (v == aboutDevBtn) {
+                    openAboutDevPage();
+                } else if (v == aboutDevBtnText) {
+                    openAboutDevPage();
+                }
+            }
+        };
+        aboutDevBtn.setOnClickListener(clickListener);
+        aboutDevBtnText.setOnClickListener(clickListener);
     }
+
+    private void openAboutDevPage() {
+        Intent intent = new Intent(this, about_dev.class);
+        startActivity(intent);
     }
+}
 
