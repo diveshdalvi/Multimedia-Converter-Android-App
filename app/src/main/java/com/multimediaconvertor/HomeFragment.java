@@ -1,12 +1,12 @@
 package com.multimediaconvertor;
-
+import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +55,69 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView =  inflater.inflate(R.layout.fragment_home, container, false);
+        ImageButton settingBtn = rootView.findViewById(R.id.settingBtn);
+        ImageButton imageButton = rootView.findViewById(R.id.imageButton);
+        ImageButton videoButton = rootView.findViewById(R.id.videoButton);
+        ImageButton textButton = rootView.findViewById(R.id.textButton);
+        ImageButton musicButton = rootView.findViewById(R.id.musicButton);
+        ImageButton pdfButton = rootView.findViewById(R.id.pdfButton);
+
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click event here
+                if (v == settingBtn) {
+                    openSettingsPage();
+                } else if (v == imageButton) {
+                    openImagePage();
+                }
+             else if (v == videoButton) {
+                   openVideoPage();
+                }
+             else if (v == textButton) {
+                    openTextPage();
+                }
+             else if (v == musicButton) {
+                   openMusicPage();
+                }
+             else if (v == pdfButton) {
+                    openPdfPage();
+                }
+            }
+        };
+
+        settingBtn.setOnClickListener(clickListener);
+        imageButton.setOnClickListener(clickListener);
+        videoButton.setOnClickListener(clickListener);
+        textButton.setOnClickListener(clickListener);
+        musicButton.setOnClickListener(clickListener);
+        pdfButton.setOnClickListener(clickListener);
+        return rootView;
     }
-}
+
+
+    private void openSettingsPage() {
+        Intent intent = new Intent(getActivity(), settingPage.class);
+        startActivity(intent);
+    }private void openImagePage() {
+        Intent intent = new Intent(getActivity(), page_3rd.class);
+        startActivity(intent);
+    }private void openVideoPage() {
+        Intent intent = new Intent(getActivity(), page_4rth.class);
+        startActivity(intent);
+    }private void openMusicPage() {
+        Intent intent = new Intent(getActivity(), page_5th.class);
+        startActivity(intent);
+    }private void openTextPage() {
+        Intent intent = new Intent(getActivity(), page_6th.class);
+        startActivity(intent);
+    }private void openPdfPage() {
+        Intent intent = new Intent(getActivity(), page_7th.class);
+        startActivity(intent);
+    }
+    }

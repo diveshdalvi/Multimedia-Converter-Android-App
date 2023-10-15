@@ -3,8 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/top_nav" />
+
 
     <TextView
         android:id="@+id/textView5"
@@ -18,18 +24,17 @@
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
-
+        app:layout_constraintVertical_bias="0.13" />
 
     <Button
         android:id="@+id/image_to_pdf_btn"
-        android:layout_width="215dp"
-        android:layout_height="70dp"
-        android:background="@color/teal"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:background="@drawable/top_rect"
         android:padding="20dp"
         android:text="Image to PDF"
         android:textColor="@color/white"
-        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
@@ -39,52 +44,40 @@
 
     <Button
         android:id="@+id/compress_btn"
-        android:layout_width="213dp"
-        android:layout_height="71dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="153dp"
         android:layout_marginBottom="568dp"
-        android:background="@color/teal"
+        android:background="@drawable/top_rect"
+
         android:padding="20dp"
         android:text="Compress"
         android:textColor="@color/white"
-        android:textSize="20dp"
+
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintTop_toBottomOf="@+id/include3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/crop_btn"
-        android:layout_width="218dp"
-        android:layout_height="65dp"
-        android:background="@color/teal"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:background="@drawable/top_rect"
         android:padding="20dp"
         android:text="Crop"
         android:textColor="@color/white"
-        android:textSize="20dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_to_pdf_btn"
         app:layout_constraintVertical_bias="0.15" />
-
-    <Button
-        android:id="@+id/back_remove_btn"
-        android:layout_width="224dp"
-        android:layout_height="67dp"
-        android:background="@color/teal"
-        android:padding="20dp"
-        android:text="Back-remove"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crop_btn"
-        app:layout_constraintVertical_bias="0.249" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,27 @@
             android:name=".page_8th"
             android:exported="true" />
         <activity
+            android:name=".page_18th"
+            android:exported="true" />
+        <activity
+            android:name=".page_17th"
+            android:exported="true" />
+        <activity
+            android:name=".page_16th"
+            android:exported="true" />
+        <activity
+            android:name=".page_13th"
+            android:exported="true" />
+        <activity
+            android:name=".page_14th"
+            android:exported="true" />
+        <activity
+            android:name=".page_15th"
+            android:exported="true" />
+        <activity
+            android:name=".top_rect"
+            android:exported="true" />
+        <activity
             android:name=".page_3rd"
             android:exported="true" />
         <activity

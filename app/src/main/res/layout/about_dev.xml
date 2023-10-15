@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_constraintTop_toBottomOf="@+id/statusBarBackground"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_below="@+id/statusBarBackground"
     android:theme="@style/AppTheme"

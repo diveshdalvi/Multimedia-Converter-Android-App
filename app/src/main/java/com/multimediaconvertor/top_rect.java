@@ -1,18 +1,16 @@
 package com.multimediaconvertor;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class page_11th extends AppCompatActivity {
 
-    protected void onCreate(Bundle savedInstanceState) {
+
+public class top_rect extends AppCompatActivity {
+    protected void setupTopRect(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page_11th);
-
+        setContentView(R.layout.top_nav);
         ImageButton backButton = findViewById(R.id.back_btn);
         ImageButton settingButton = findViewById(R.id.setting_btn);
 
@@ -34,6 +32,6 @@ public class page_11th extends AppCompatActivity {
     private void openSetting() {
         Intent intent = new Intent(this, settingPage.class);
         startActivity(intent);
-
     }
 }
+

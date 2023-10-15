@@ -7,12 +7,11 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class page_11th extends AppCompatActivity {
+public class page_17th extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page_11th);
-
+        setContentView(R.layout.page_17th);
         ImageButton backButton = findViewById(R.id.back_btn);
         ImageButton settingButton = findViewById(R.id.setting_btn);
 
@@ -34,6 +33,5 @@ public class page_11th extends AppCompatActivity {
     private void openSetting() {
         Intent intent = new Intent(this, settingPage.class);
         startActivity(intent);
-
     }
-}
+    }
