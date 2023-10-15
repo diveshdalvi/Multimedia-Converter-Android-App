@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +31,35 @@ public class page_7th  extends AppCompatActivity{
                 openSetting();
             }
         });
+
+        Button convertToDocxBtn = findViewById(R.id.convertToDocx);
+        Button mergePdfBtn = findViewById(R.id.mergePdfBtn);
+        Button pdfSplitBtn = findViewById(R.id.pdfSplitBtn);
+
+
+        convertToDocxBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSetting();
+            }
+        });
+        mergePdfBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMergePdfPage();
+            }
+        });
+        pdfSplitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSetting();
+            }
+        });
+    }
+
+    private void openMergePdfPage() {
+        Intent intent = new Intent(this, page_11th.class);
+        startActivity(intent);
     }
 
     private void openSetting() {

@@ -16,8 +16,8 @@ public class page_8th extends AppCompatActivity {
         setContentView(R.layout.page_8th);
 
 
-        TextView myTextView = findViewById(R.id.textView9);
-        String text = "Underlined Text";
+        TextView myTextView = findViewById(R.id.underline_btn);
+        String text = "Underline";
         SpannableString spannableString = new SpannableString(text);
         spannableString.setSpan(new UnderlineSpan(), 0, text.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 

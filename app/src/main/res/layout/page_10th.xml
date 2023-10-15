@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <include
@@ -25,13 +26,13 @@
         app:layout_constraintTop_toBottomOf="@+id/include2" />
 
     <Button
-        android:id="@+id/coutput_audio_btn"
+        android:id="@+id/output_file"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:textSize="25sp"
         android:layout_marginTop="72dp"
         android:background="@drawable/top_rect"
-        android:text="Upload Audio"
+        android:text="Output File"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,28 +40,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upload_video_btn"
         app:layout_constraintVertical_bias="0.091" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="154dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coutput_audio_btn"
-        app:layout_constraintVertical_bias="0.308" />
-
-    <ImageButton
-        android:id="@+id/play_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
-        app:layout_constraintHorizontal_bias="0.618"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coutput_audio_btn"
-        app:layout_constraintVertical_bias="0.255"
-        app:srcCompat="@drawable/baseline_slow_motion_video_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

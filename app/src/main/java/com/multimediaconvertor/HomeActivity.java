@@ -37,7 +37,6 @@ public class HomeActivity extends AppCompatActivity  {
             final FragmentTransaction replace = fragmentTransaction.replace(R.id.frame_layout , fragment);
             fragmentTransaction.commit();
 
-
         }
  }
 

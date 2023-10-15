@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.157" />
 
     <Button
-        android:id="@+id/convertToLowerBtn"
+        android:id="@+id/convertToDocx"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
@@ -35,11 +35,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/convertToUpperBtn"
+        app:layout_constraintTop_toBottomOf="@id/pdfSplitBtn"
         app:layout_constraintVertical_bias="0.225" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/mergePdfBtn"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
@@ -51,12 +51,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/convertToLowerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/convertToDocx"
         app:layout_constraintVertical_bias="0.348"
         tools:ignore="HardcodedText,SpUsage" />
 
     <Button
-        android:id="@+id/convertToUpperBtn"
+        android:id="@+id/pdfSplitBtn"
         android:layout_width="240dp"
         android:layout_height="100dp"
         android:textSize="25sp"

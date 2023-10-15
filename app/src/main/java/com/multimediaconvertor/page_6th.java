@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +31,34 @@ public class page_6th extends AppCompatActivity {
                 openSetting();
             }
         });
+        Button convertToUpperBtn = findViewById(R.id.convertToUpperBtn);
+        Button convertToLowerBtn = findViewById(R.id.convertToLowerBtn);
+        Button changeStylingBtn = findViewById(R.id.changeStyling_btn);
+
+
+        convertToUpperBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               openSetting();
+            }
+        });
+        convertToLowerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSetting();
+            }
+        });
+        changeStylingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openChangeStylingPage();
+            }
+        });
+    }
+
+    private void openChangeStylingPage() {
+        Intent intent = new Intent(this, page_8th.class);
+        startActivity(intent);
     }
 
     private void openSetting() {
