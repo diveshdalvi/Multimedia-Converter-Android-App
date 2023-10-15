@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -52,8 +50,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+=======
+    tools:context=".test_fragment">
+>>>>>>> 78d6cd37487075d93d01942ce3d7d0eb628aea58
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
+<<<<<<< HEAD
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -206,6 +209,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pdfButton"
         tools:ignore="MissingConstraints" />
+=======
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+>>>>>>> 78d6cd37487075d93d01942ce3d7d0eb628aea58
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
