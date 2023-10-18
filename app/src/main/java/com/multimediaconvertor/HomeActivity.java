@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
 
 import android.os.Bundle;
-
+import com.multimediaconvertor.Data.myDBHandler;
 import com.multimediaconvertor.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity  {
@@ -37,6 +37,9 @@ public class HomeActivity extends AppCompatActivity  {
             final FragmentTransaction replace = fragmentTransaction.replace(R.id.frame_layout , fragment);
             fragmentTransaction.commit();
 
+
+
+//            MyDBHandler db = new MyDBHandler (HomeActivity.this);
         }
  }
 
