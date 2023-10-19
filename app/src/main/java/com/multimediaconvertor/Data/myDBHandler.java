@@ -1,12 +1,16 @@
 package com.multimediaconvertor.Data;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.multimediaconvertor.Params.params;
 import com.multimediaconvertor.model.History;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class myDBHandler extends SQLiteOpenHelper {
     public myDBHandler(Context context){
@@ -35,5 +39,21 @@ public class myDBHandler extends SQLiteOpenHelper {
         db.insert(params.TABLE_NAME, null , values);
         Log.d( "dbHistory","Successfully Inserted!");
         db.close();
+    }
+    public List<History> getHistory(){
+        List<History> historyList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        String select = "SELECT * FROM " + params.TABLE_NAME;
+        Cursor cursor = db.rawQuery(select,null);
+
+        if(cursor.moveToFirst()){
+            do {
+                History history = new History();
+                history.setId(cursor.getInt(0));
+                history.setName(cursor.getString(1));
+                history.setPath(cursor.getString(2));
+                history.setDate(cursor.getString(3));
+            }
+        }
     }
 }
