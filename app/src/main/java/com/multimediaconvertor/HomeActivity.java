@@ -26,10 +26,6 @@ public class HomeActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
 
-
-
-
-
         replaceFragment(new HomeFragment());
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
