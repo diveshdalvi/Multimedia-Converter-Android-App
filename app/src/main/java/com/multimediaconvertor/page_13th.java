@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -46,6 +47,7 @@ public class page_13th  extends AppCompatActivity {
                                 history.setPath("android/path/path");
                                 history.setDate(currentDate);
                                 db.addHistory(history);
+                                Log.d("dbHistory","Name "+history.getName());
                         }
                 });
         }

@@ -18,15 +18,10 @@ public class page_21th extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_21th);
 
-        // Get the source and destination URIs from your intent or other source
+
         Uri sourceUri = getIntent().getParcelableExtra("sourceUri");
         Uri destinationUri = Uri.fromFile(new File(getCacheDir(), "cropped_image.jpg"));
 
-//        // Create a UCrop instance and set your options
-//        UCrop uCrop = UCrop.of(sourceUri, destinationUri);
-//        uCrop.withOptions(options);  // Apply your crop options here
-//
-//        // Start the cropping activity
-//        uCrop.start(ImageCropActivity.this);
+
     }
 }

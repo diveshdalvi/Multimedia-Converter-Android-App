@@ -53,7 +53,9 @@ public class myDBHandler extends SQLiteOpenHelper {
                 history.setName(cursor.getString(1));
                 history.setPath(cursor.getString(2));
                 history.setDate(cursor.getString(3));
-            }
+                historyList.add(history);
+            }while(cursor.moveToNext());
         }
+        return historyList;
     }
 }

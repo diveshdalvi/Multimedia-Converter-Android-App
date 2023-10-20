@@ -7,6 +7,7 @@ import android.provider.DocumentsContract;
 import android.text.SpannableString;
 import android.text.Spannable;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -36,6 +37,7 @@ public class page_8th extends AppCompatActivity {
                 history.setPath("android/path/path");
                 history.setDate(currentDate);
                 db.addHistory(history);
+
             }
         });
 
