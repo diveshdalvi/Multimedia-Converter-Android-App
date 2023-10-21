@@ -84,7 +84,11 @@ public class HistoryFragment extends Fragment {
         //Recycler view
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.r_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(thiscontext));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(thiscontext);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+
 
         // Db handle
         myDBHandler db = new myDBHandler(thiscontext);
@@ -97,6 +101,7 @@ public class HistoryFragment extends Fragment {
 
         for(History history : allHistory){
             historyArrayList.add(history);
+            Log.d("dbHistoryData","data = " + allHistory);
         }
 
         // recycler view adapter work

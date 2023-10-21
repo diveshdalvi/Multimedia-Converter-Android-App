@@ -34,10 +34,9 @@ public class page_8th extends AppCompatActivity {
                 String currentDate = dateFormat.format(calendar.getTime());
                 History history  = new History();
                 history.setName("Change Styling");
-                history.setPath("android/path/path");
+                history.setPath("/storage/emulated/0/Important Documents/10th Marksheet.pdf");
                 history.setDate(currentDate);
                 db.addHistory(history);
-
             }
         });
 
