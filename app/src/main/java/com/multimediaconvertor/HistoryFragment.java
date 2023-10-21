@@ -11,10 +11,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 
 import com.multimediaconvertor.Data.myDBHandler;
 import com.multimediaconvertor.model.History;
-
+//import com.multimediaconvertor.MyAdapter;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -73,11 +75,33 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_history, container, false);
-
+        RecyclerHistoryAdapter recyclerHistoryAdapter;
+        ArrayList<History> historyArrayList;
+        ArrayAdapter<String> arrayAdapter;
         Context thiscontext;
         thiscontext = container.getContext();
+
+        //Recycler view
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.r_view);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(thiscontext));
+
+        // Db handle
+        myDBHandler db = new myDBHandler(thiscontext);
+        List<History> allHistory = db.getHistory();
+
+        //array list for history
+        historyArrayList = new ArrayList<>();
+
+
+
+        for(History history : allHistory){
+            historyArrayList.add(history);
+        }
+
+        // recycler view adapter work
+        recyclerHistoryAdapter = new RecyclerHistoryAdapter(thiscontext,historyArrayList);
+        recyclerView.setAdapter(recyclerHistoryAdapter);
         return view;
     }
 }

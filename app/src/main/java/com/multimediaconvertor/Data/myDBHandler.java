@@ -51,8 +51,9 @@ public class myDBHandler extends SQLiteOpenHelper {
                 History history = new History();
                 history.setId(cursor.getInt(0));
                 history.setName(cursor.getString(1));
-                history.setPath(cursor.getString(2));
-                history.setDate(cursor.getString(3));
+                history.setDate(cursor.getString(2));
+                history.setPath(cursor.getString(3));
+
                 historyList.add(history);
             }while(cursor.moveToNext());
         }

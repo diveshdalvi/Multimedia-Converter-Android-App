@@ -1,10 +1,10 @@
 package com.multimediaconvertor.model;
 
 public class History {
-    private int id;
-    private String name;
-    private String path;
-    private String date;
+    public int id;
+    public String name;
+    public String path;
+    public String date;
 
     public History() {
         // No-argument constructor

@@ -37,11 +37,11 @@ public class HomeActivity extends AppCompatActivity  {
             }
             return true;
         });
-        myDBHandler db = new myDBHandler(HomeActivity.this);
-        List<History> allHistory = db.getHistory();
-        for(History history : allHistory){
-            Log.d("dbHistory","Id " + history.getId() + " Name " + history.getName() +" Path " + history.getPath() +" Date " + history.getDate() );
-        }
+//        myDBHandler db = new myDBHandler(HomeActivity.this);
+//        List<History> allHistory = db.getHistory();
+//        for(History history : allHistory){
+//            Log.d("dbHistory","Id " + history.getId() + " Name " + history.getName() +" Path " + history.getPath() +" Date " + history.getDate() );
+//        }
         }
         private void replaceFragment(Fragment fragment){
             FragmentManager fragmentManager = getSupportFragmentManager();
