@@ -26,7 +26,7 @@
         app:layout_constraintTop_toBottomOf="@+id/include2" />
 
     <Button
-        android:id="@+id/output_file"
+        android:id="@+id/output_btn"
         android:layout_width="240dp"
         android:layout_height="100dp"
         android:textSize="25sp"

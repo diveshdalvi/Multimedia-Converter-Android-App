@@ -1,12 +1,23 @@
 package com.multimediaconvertor;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+
+import com.multimediaconvertor.Data.myDBHandler;
+import com.multimediaconvertor.model.History;
+//import com.multimediaconvertor.MyAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +38,9 @@ public class HistoryFragment extends Fragment {
     public HistoryFragment() {
         // Required empty public constructor
     }
+
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -55,10 +69,44 @@ public class HistoryFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
+        RecyclerHistoryAdapter recyclerHistoryAdapter;
+        ArrayList<History> historyArrayList;
+        ArrayAdapter<String> arrayAdapter;
+        Context thiscontext;
+        thiscontext = container.getContext();
+
+        //Recycler view
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.r_view);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(thiscontext);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+
+        // Db handle
+        myDBHandler db = new myDBHandler(thiscontext);
+        List<History> allHistory = db.getHistory();
+
+        //array list for history
+        historyArrayList = new ArrayList<>();
+
+
+
+        for(History history : allHistory){
+            historyArrayList.add(history);
+            Log.d("dbHistoryData","data = " + allHistory);
+        }
+
+        // recycler view adapter work
+        recyclerHistoryAdapter = new RecyclerHistoryAdapter(thiscontext,historyArrayList);
+        recyclerView.setAdapter(recyclerHistoryAdapter);
+        return view;
     }
 }

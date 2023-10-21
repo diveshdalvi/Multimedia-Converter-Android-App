@@ -120,4 +120,6 @@ public class HomeFragment extends Fragment {
         Intent intent = new Intent(getActivity(), page_7th.class);
         startActivity(intent);
     }
+
+
     }

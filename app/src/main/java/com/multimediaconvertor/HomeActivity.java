@@ -4,20 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.annotation.SuppressLint;
-
 import android.os.Bundle;
+import android.util.Log;
+
 import com.multimediaconvertor.Data.myDBHandler;
 import com.multimediaconvertor.databinding.ActivityHomeBinding;
+import com.multimediaconvertor.model.History;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity  {
     ActivityHomeBinding binding;
     @SuppressLint("MissingSuperCall")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
+
         replaceFragment(new HomeFragment());
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -29,7 +37,11 @@ public class HomeActivity extends AppCompatActivity  {
             }
             return true;
         });
-
+//        myDBHandler db = new myDBHandler(HomeActivity.this);
+//        List<History> allHistory = db.getHistory();
+//        for(History history : allHistory){
+//            Log.d("dbHistory","Id " + history.getId() + " Name " + history.getName() +" Path " + history.getPath() +" Date " + history.getDate() );
+//        }
         }
         private void replaceFragment(Fragment fragment){
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -39,7 +51,7 @@ public class HomeActivity extends AppCompatActivity  {
 
 
 
-//            MyDBHandler db = new MyDBHandler (HomeActivity.this);
+
         }
  }
 
