@@ -7,37 +7,34 @@
     android:background="@drawable/gradient_drawable"
     tools:context=".SplashActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="372dp"
-        android:layout_height="369dp"
-        android:layout_marginTop="180dp"
-        android:contentDescription="@string/app_name"
+    <com.airbnb.lottie.LottieAnimationView
 
-
-        android:src="@drawable/app_logo"
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="184dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"></ImageView>
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/lottie"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/text"
-        style="@style/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Multimedia Convertor"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.573"
-        tools:ignore="MissingConstraints">
-
-    </TextView>
-
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
